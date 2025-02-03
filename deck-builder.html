@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokémon TCG Deck Builder</title>
+        <link rel="stylesheet" href="deck-builder.css">
+        <script src="deck-builder.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Pokémon TCG Deck Builder</h1>
+        <button id="backButton" class="back-button">Back to Search</button>
+    </div>
+
+    <div class="container">
+        <div class="search-section">
+            <div class="search-controls">
+                <input type="text" id="searchInput" placeholder="Search cards...">
+                <button id="searchButton">Search</button>
+            </div>
+            <div id="searchResults" class="card-grid"></div>
+        </div>
+
+        <div class="deck-section">
+            <div class="deck-info">
+                <input type="text" id="deckName" placeholder="Deck Name" class="deck-name-input">
+                <div class="deck-stats">
+                    <span id="cardCount">0/60 cards</span>
+                    <button id="saveDeck" class="save-button">Save Deck</button>
+                </div>
+            </div>
+            <div id="deckList" class="deck-list">
+                <!-- Deck cards will be listed here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingSpinner" class="loading-spinner hidden">Loading...</div>
+
+</body>
+</html>

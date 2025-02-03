@@ -1,11 +1,20 @@
 const BASE_URL = "https://api.pokemontcg.io/v2/cards";
-const API_KEY = "eb3574b9-9e90-41ee-9ebf-3d88065876f7"; // Replace with your real API key
+const API_KEY = "eb3574b9-9e90-41ee-9ebf-3d88065876f7"; 
 
-document.getElementById("searchButton").addEventListener("click", () => {
-    const searchQuery = document.getElementById("searchInput").value.trim();
-    if (searchQuery) {
-        searchPokemonCard(searchQuery);
-    }
+// Wait for DOM to load completely
+document.addEventListener('DOMContentLoaded', () => {
+    // Search button functionality
+    document.getElementById("searchButton").addEventListener("click", () => {
+        const searchQuery = document.getElementById("searchInput").value.trim();
+        if (searchQuery) {
+            searchPokemonCard(searchQuery);
+        }
+    });
+
+    // Deck builder button functionality
+    document.getElementById("deckBuilderButton").addEventListener("click", () => {
+        window.location.href = "deck-builder.html";
+    });
 });
 
 async function searchPokemonCard(name) {
